@@ -1,4 +1,4 @@
-import { HeaderResponsive as Header } from '@yakinsoft/common-ui'
+import { Footer, HeaderResponsive as Header } from '@yakinsoft/common-ui'
 import { useRouter } from 'next/router'
 
 export default function Layout({children}) {
@@ -25,6 +25,7 @@ export default function Layout({children}) {
     <>
       <Header links={links} activeLink={router.pathname}/>
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

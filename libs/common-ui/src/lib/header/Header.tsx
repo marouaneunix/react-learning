@@ -97,11 +97,11 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <h1>LOGO</h1>
+        <h1>YAKINSOFT</h1>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
-
+      
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
