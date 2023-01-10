@@ -1,1 +1,1 @@
-export * from './lib/sidebar/Sidebar';
+export * from './lib/header/Header';
