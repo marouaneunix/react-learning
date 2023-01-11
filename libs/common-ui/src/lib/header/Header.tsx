@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
@@ -80,7 +79,7 @@ interface HeaderResponsiveProps {
 }
 
 export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
-  const [opened, { toggle, close }] = useDisclosure(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
 

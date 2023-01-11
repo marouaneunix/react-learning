@@ -5,8 +5,8 @@ export default function Layout({children}) {
   const router = useRouter();
   const links = [
     {
-      "link": "/features",
-      "label": "Features"
+      "link": "/react-learning",
+      "label": "reactJs"
     },
     {
       "link": "/pricing",

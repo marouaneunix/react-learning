@@ -11,6 +11,7 @@
     "@mantine/core": "^5.10.0",
     "@mantine/hooks": "^5.10.0",
     "@mantine/next": "^5.10.0",
+    "@mantine/prism": "^5.10.0",
     "@tabler/icons": "^1.119.0",
     "core-js": "^3.6.5",
     "next": "13.1.1",
