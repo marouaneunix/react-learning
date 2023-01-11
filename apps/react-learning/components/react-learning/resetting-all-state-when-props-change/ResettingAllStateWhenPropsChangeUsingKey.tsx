@@ -60,7 +60,7 @@ export const ResettingAllStateWhenPropsChangeUsingKey = () => {
 
       <h3>User ❤️ {selectedUser && selectedUser.name}</h3>
       {selectedUser && <Profile user={selectedUser} key={selectedUser.userId} /> }
-      <CodeSnippet language="tsx" withLineNumbers title="Code Example" hig={
+      <CodeSnippet language="tsx" withLineNumbers title="Code Example" customHighlightLines={
         {
           added: [5,6,7],
           deleted: []

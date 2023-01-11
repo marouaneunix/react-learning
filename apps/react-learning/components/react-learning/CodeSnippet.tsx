@@ -20,20 +20,23 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 
 interface CodeSnippetProps extends PrismProps {
   title?: string;
-  hig?: Record<"added" | "deleted", Array<number>>
+  customHighlightLines?: Record<"added" | "deleted", Array<number>>
 }
 
-export const CodeSnippet = ({ title, hig, children, ...others }: CodeSnippetProps) => {
+export const CodeSnippet = ({ title, customHighlightLines, children, ...others }: CodeSnippetProps) => {
   const { classes } = useStyles();
 
 
   const buildHighlightLines = () => {
     const highlightLines = {};
-    if (!hig) {
+    if (!customHighlightLines) {
       return highlightLines;
     }
-    hig.added.forEach(element => {
+    customHighlightLines.added.forEach(element => {
       highlightLines[element] = { color: 'green', label: '+' }
+    });
+    customHighlightLines.deleted.forEach(element => {
+      highlightLines[element] = { color: 'red', label: '-' }
     });
     return highlightLines;
   }
