@@ -1,4 +1,4 @@
-import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
+import { createStyles, Header, Container, Group, Burger, Paper, Transition, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 
@@ -96,11 +96,11 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <h1>YAKINSOFT</h1>
+        <h3>Yakinsoft</h3>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
-      
+
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>

@@ -1,5 +1,5 @@
 import { Button, Container, Flex, Textarea } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CodeSnippet from "../CodeSnippet";
 import { codeExamples } from "./code";
 
@@ -62,10 +62,10 @@ export const ResettingAllStateWhenPropsChangeUsingKey = () => {
       {selectedUser && <Profile user={selectedUser} key={selectedUser.userId} /> }
       <CodeSnippet language="tsx" withLineNumbers title="Code Example" customHighlightLines={
         {
-          added: [5,6,7],
+          added: [17],
           deleted: []
         }
-      }>{codeExamples.error}</CodeSnippet>
+      }>{codeExamples.key}</CodeSnippet>
     </Container>
   )
 }

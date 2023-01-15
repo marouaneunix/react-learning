@@ -50,5 +50,27 @@ export const codeExamples = {
       </div>
       )
     }
-  `
+  `,
+  key: `
+  export const ResettingAllStateWhenPropsChangeUsingKey = () => {
+    const [selectedUser, setSelectedUser] = useState<User | undefined>(undefined);
+  
+    const usersUI = () => users.map(user => <Button color="violet" size="md" variant="light" key={user.userId} onClick={() => setSelectedUser(user)} >{user.name}</Button>)
+  
+    return (
+      <Container>
+        <Flex
+          direction={{ base: 'column', sm: 'row' }}
+          gap={{ base: 'sm', sm: 'lg' }}
+          justify={{ sm: 'center' }}
+        >
+          {usersUI()}
+        </Flex>
+  
+        <h3>User ❤️ {selectedUser && selectedUser.name}</h3>
+        {selectedUser && <Profile user={selectedUser} key={selectedUser.userId} /> }
+      </Container>
+    )
+  }
+  `,
 };

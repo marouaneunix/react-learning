@@ -56,9 +56,9 @@ export const ResettingAllStateWhenPropsChangeUseEffect = () => {
         onChange={event => setComment(event.target.value)}
         withAsterisk
       />
-<CodeSnippet language="tsx" hig={
+      <CodeSnippet language="tsx" customHighlightLines={
         {
-          added: [5,6,7],
+          added: [5, 6, 7],
           deleted: []
         }
       } withLineNumbers title="Code Example">{codeExamples.useEffect}</CodeSnippet>
